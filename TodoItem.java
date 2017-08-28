@@ -1,9 +1,10 @@
 public class TodoItem{
-    private String name;
+    
+    private String itemName;
     boolean isDone;
 
-    public TodoItem(String name){
-        this.name = name;
+    public TodoItem(String itemName){
+        this.itemName = itemName;
         this.isDone = false;
     }
 
@@ -15,18 +16,21 @@ public class TodoItem{
         this.isDone = false;
     }
 
-    public String getName (String name) {
-        return this.name;
+    public String getItemName () {
+        return this.itemName;
     }
 
-    public String getString () {
+    public String showString () {
+
+        String info;
 
         if (this.isDone) {
-            return  "[X] " + this.name;
+            info =  "[X] " + this.itemName;
         } 
         else {
-            return "[ ] " + this.name;
+            info = "[ ] " + this.itemName;
         }
+        return info;
         
     }
 
