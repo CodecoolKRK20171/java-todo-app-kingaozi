@@ -8,10 +8,21 @@ public class TodoList{
         this.todoList.add(item);
     }
 
-    public void archiveItem (TodoItem item) {
+    public void archiveItem () {
         for(int i =0; i < todoList.size(); i++) {
-            if(item.getIsDone()) {
-                todoList.remove(item);
+            if(todoList.get(i).getIsDone()) {
+                todoList.remove(i);
+            }
+        }
+    }
+
+    public void markItem(String chosenItem) {
+        for (TodoItem item: todoList) {
+            if(item.getItemName().equals(chosenItem)) {
+                item.mark();
+            }
+            else {
+                System.out.println("There is no such option!");
             }
         }
     }
