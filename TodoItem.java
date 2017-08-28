@@ -29,5 +29,9 @@ public class TodoItem{
         }
         
     }
+
+    public boolean getIsDone () {
+        return this.isDone;
+    }
     
 }
